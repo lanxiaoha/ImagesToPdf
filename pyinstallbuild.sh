@@ -1,9 +1,9 @@
-python3 -m venv ./
-source ./bin/activate
-pip3 install reportlab
-pip3 install Pillow
-pip3 install pyinstaller
-pip3 install PyQt5
+#python3 -m venv ./
+#source ./bin/activate
+#pip3 install reportlab
+#pip3 install Pillow
+#pip3 install pyinstaller
+#pip3 install PyQt5
 
 pyinstaller --noconfirm \
 -n ImageToPDF \
@@ -14,3 +14,5 @@ pyinstaller --noconfirm \
 --onefile \
 --noconsole \
 src/main.py
+
+python pyinstaller --noconfirm -n ImageToPDF --clean --windowed --specpath=./pyinstallbuild --onefile --noconsole src/main.py
