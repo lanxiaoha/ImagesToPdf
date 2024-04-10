@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QApplication
 import sys
-from  src.page.MainPageWindow import MainPageWindow
+from src.page.MainPageWindow import MainPageWindow
 
 if __name__ == '__main__':
     appContext = QApplication([])

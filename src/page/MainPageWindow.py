@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import  QMainWindow,QFileDialog,QMessageBox
 from .ui.ImagesToPdfMainWindow import Ui_ImageToPdfWindow
 import os
 from PyQt5.QtGui import QDoubleValidator
-from .ImageToPdf import exportPdfFile
+# from .ImageToPdf import exportPdfFile
 
 class MainPageWindow(QMainWindow,Ui_ImageToPdfWindow):
 
@@ -13,7 +13,7 @@ class MainPageWindow(QMainWindow,Ui_ImageToPdfWindow):
         self.setFixedSize(self.width(),self.height())
         self.foldPath:str = ""
         self.scale = 1.5
-        self.initListener()
+        # self.initListener()
 
     def initListener(self):
         self.startButton.clicked.connect(self.onClickStart)
@@ -49,7 +49,7 @@ class MainPageWindow(QMainWindow,Ui_ImageToPdfWindow):
 
         autoScale = float(self.autoScaleEdit.text())
 
-        exportPdfFile(self.foldPath,scale=self.scale,directNewPage=directNewPage,autoScale=autoScale)
+        # exportPdfFile(self.foldPath,scale=self.scale,directNewPage=directNewPage,autoScale=autoScale)
 
         QMessageBox.information(self,"","导出成功",QMessageBox.Ok)
 
