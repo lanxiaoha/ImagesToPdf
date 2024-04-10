@@ -1,0 +1,15 @@
+name: Actions Build Package
+run-name: ${{ github.actor }} is run Build Package
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Build Mac Package
+        run: sh pyinstallbuild.sh
+
+
