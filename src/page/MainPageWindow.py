@@ -13,7 +13,7 @@ class MainPageWindow(QMainWindow,Ui_ImageToPdfWindow):
         self.setFixedSize(self.width(),self.height())
         self.foldPath:str = ""
         self.scale = 1.5
-        # self.initListener()
+        self.initListener()
 
     def initListener(self):
         self.startButton.clicked.connect(self.onClickStart)
