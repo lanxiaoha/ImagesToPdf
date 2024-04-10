@@ -47,8 +47,7 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        python -m pip install --upgrade pip PyQt5 pyinstaller pillow reportlab
     - name: Build Package
       run: |
         pyinstaller --noconfirm -n ImageToPDF --clean --windowed --specpath=./pyinstallbuild --onefile --noconsole src/main.py
