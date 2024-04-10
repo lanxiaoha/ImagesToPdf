@@ -1,3 +1,2 @@
-pyuic5 MergeFileItemView.ui -o MergeFileItemView.py
-pyuic5 MergePdfWindow.ui -o MergePdfWindow.py
-pyuic5 MergeFileSettingsDialog.ui -o MergeFileSettingsDialog.py
+#pyuic5 main_window.ui.ui -o ImagesToPdfMainWindow.py
+exec python -m PyQt5.uic.pyuic main_window.ui -o ImagesToPdfMainWindow.py -x
